@@ -1,0 +1,264 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9fffa;
+  color: #14532d;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  background-color: #2ecc71;
+  color: white;
+  padding: 1.2rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #d9fbe1;
+}
+
+/* Auth Buttons */
+.auth-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.auth-links .btn {
+  background-color: white;
+  color: #2ecc71;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-links .btn:hover {
+  background-color: #27ae60;
+  color: white;
+}
+
+/* Hero Image */
+main section:first-of-type img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 4px solid #2ecc71;
+}
+
+/* Main Content Container */
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Styling */
+.item {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 128, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 128, 0, 0.15);
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item h2 {
+  color: #27ae60;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.item p {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  color: #344e41;
+  font-size: 0.95rem;
+}
+
+/* Buttons inside cards */
+.item a {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.item a:hover {
+  background-color: #219150;
+}
+
+/* ✅ Image Slider */
+.slider {
+  position: relative;
+  width: 100vw; /* Full screen width */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0;
+  
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100vw; /* Each slide takes full viewport width */
+  height: 400px;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #0d4d2c;
+  color: white;
+  padding: 30px 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a,
+.footer-section a {
+  color: #b2e8c8;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .social-links a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .slider {
+    width: 95%;
+  }
+
+  .slide {
+    height: 250px;
+  }
+}
