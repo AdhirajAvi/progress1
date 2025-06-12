@@ -1,0 +1,99 @@
+/* Light background and centered form like Sign Up */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fff9; /* very light green */
+  color: #0e4b2c;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 128, 0, 0.08); /* soft green shadow */
+}
+
+/* Heading style similar to Sign Up */
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2ebc69;
+  font-size: 28px;
+}
+
+/* Form layout */
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #0e4b2c;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #d6e9d6;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #f8fef8;
+  color: #333;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Button style */
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #2ebc69;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #25a35c;
+}
+
+/* Contact info */
+.contact-info {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-info p {
+  margin: 8px 0;
+}
+
+.contact-info strong {
+  color: #0e4b2c;
+}
+
+.contact-info a {
+  color: #2ebc69;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 20px;
+    padding: 25px;
+  }
+}
