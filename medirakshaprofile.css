@@ -1,0 +1,110 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e8f8f5, #d1f2eb);
+  margin: 0;
+  color: #14532d;
+}
+
+header {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 18px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  letter-spacing: 0.5px;
+}
+
+.profile-section {
+  max-width: 700px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-section h2 {
+  text-align: center;
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 140px;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #2ecc71;
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-details label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.profile-details input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  transition: all 0.2s ease;
+}
+
+.profile-details input:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 6px rgba(46,204,113,0.3);
+  outline: none;
+}
+
+#saveProfileBtn {
+  width: fit-content;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+#saveProfileBtn:hover {
+  background: linear-gradient(135deg, #1e874b, #27ae60);
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-details {
+    width: 100%;
+  }
+}

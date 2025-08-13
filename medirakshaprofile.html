@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medi Raksha - User Profile</title>
+  <link rel="stylesheet" href="medirakshaprofile.css">
+</head>
+<body>
+
+  <header>
+    <h1>Medi Raksha - User Profile</h1>
+  </header>
+
+  <section class="profile-section">
+    <h2>User Profile</h2>
+    <div class="profile-card">
+      <div class="profile-image">
+        <img id="profilePicPreview" src="https://via.placeholder.com/120" alt="Profile Picture">
+        <input type="file" id="profilePicInput" accept="image/*">
+      </div>
+      <div class="profile-details">
+        <label>
+          Name:
+          <input type="text" id="profileName" placeholder="Your Name">
+        </label>
+        <label>
+          Email:
+          <input type="email" id="profileEmail" placeholder="Your Email">
+        </label>
+        <label>
+          Phone:
+          <input type="tel" id="profilePhone" placeholder="Your Phone">
+        </label>
+        <button id="saveProfileBtn">Save Profile</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="profile.js" defer></script>
+</body>
+</html>

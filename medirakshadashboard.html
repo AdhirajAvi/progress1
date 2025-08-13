@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medi Raksha Dashboard</title>
+  <link rel="stylesheet" href="medirakshadashboard.css" />
+
+  <!-- QR Scanner Library -->
+  <script src="https://unpkg.com/html5-qrcode" defer></script>
+  <!-- OCR Library -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Medi Raksha - Patient Reports Dashboard</h1>
+</header>
+
+<main class="dashboard-container">
+
+  <!-- Upload/Scan Section -->
+  <section class="upload-section">
+    <h2>Add Patient Report</h2>
+    <form id="reportForm">
+      <input type="text" id="patientName" placeholder="Patient Name" required>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>Heart Checkup</option>
+        <option>Brain Checkup</option>
+        <option>Blood Test</option>
+        <option>General Health</option>
+      </select>
+      <input type="text" id="hospital" placeholder="Hospital Name" required>
+      <input type="file" id="reportFile" accept="image/*,application/pdf">
+      <button type="button" id="scanBtn">Scan via Camera</button>
+      <button type="button" id="ocrBtn">Extract Text (OCR)</button>
+      <button type="submit">Add Report</button>
+    </form>
+
+    <!-- QR Scanner -->
+    <div id="reader" style="width:300px; margin-top:10px; display:none;"></div>
+  </section>
+
+  <!-- Reports Display -->
+  <section class="reports-section">
+    <h2>Reports List</h2>
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="Heart Checkup">Heart</button>
+      <button data-filter="Brain Checkup">Brain</button>
+      <button data-filter="Blood Test">Blood</button>
+      <button data-filter="General Health">General</button>
+    </div>
+    <div id="reportsList" class="reports-list"></div>
+  </section>
+
+</main>
+
+<script src="medirakshadashboard.js" defer></script>
+</body>
+</html>
